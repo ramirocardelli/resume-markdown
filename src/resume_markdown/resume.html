@@ -1,0 +1,216 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ramiro Cardelli</title>
+<style>
+body {
+    color: #000000;
+    background: #EEEEEE;
+    font: 1.1em "Times New Roman";
+    line-height: 1.2;
+    margin: 40px 0;
+}
+#resume {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 40px 60px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 2px 2px 4px #AAAAAA;
+    -webkit-box-shadow: 2px 2px 4px #AAAAAA;
+}
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 200%;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    border-bottom: 1px solid #000000;
+    text-transform: uppercase;
+    font-size: 130%;
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+h3 {
+    font-size: 100%;
+    margin: 0.8em 0 0.3em 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+p {
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    }
+ul {
+    padding: 0;
+    margin: 0 1.5em;
+    }
+/* ul immediately after h1 = contact list */
+h1 + ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    }
+h1 + ul > li {
+    display: inline;
+    white-space: pre;
+    list-style-type: none;
+}
+h1 + ul > li:after {
+    content: "  \2022  ";
+}
+h1 + ul > li:last-child:after {
+    content: "";
+}
+/* p immediately after contact list = summary */
+h1 + ul + p {
+    margin: 1em 0;
+}
+@media print {
+    body {
+        font-size: 10pt;
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+    #resume {
+        margin: 0;
+        padding: 0;
+        border: 0px;
+        background: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    /* Do not underline abbr tags in PDF */
+    abbr {
+        text-decoration: none;
+        font-variant: none;
+    }
+    /* Make links black in PDF */
+    /* Move this outside the print block to apply this in HTML too */
+    a, a:link, a:visited, a:hover {
+        color: #000000;
+        text-decoration: underline;
+    }
+}
+@page {
+    /* Change margins and paper size of PDF */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/@page */
+    size: letter;
+    margin: 0.5in 0.8in;
+}
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 16pt;
+        margin: 0;
+        padding: 0;
+        background: #FFFFFF !important;
+    }
+    #resume {
+        margin: 0;
+        padding: 1em;
+        border: 0px;
+        background: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+}
+
+</style>
+</head>
+<body>
+<div id="resume">
+<h1>Ramiro Cardelli</h1>
+<ul>
+<li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#97;&#109;&#105;&#114;&#111;&#99;&#97;&#114;&#100;&#101;&#108;&#108;&#105;&#56;&#57;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#114;&#97;&#109;&#105;&#114;&#111;&#99;&#97;&#114;&#100;&#101;&#108;&#108;&#105;&#56;&#57;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>+54 9 223 663-2207</li>
+<li>Mar del Plata, Argentina</li>
+<li><a href="https://www.linkedin.com/in/ramirocardelli/">LinkedIn</a></li>
+<li><a href="https://github.com/ramirocardelli/">GitHub</a></li>
+</ul>
+<p>Ingeniero en Informática con experiencia práctica en control de calidad (QA), desarrollo de extremo a extremo y emprendimiento. Apasionado por crear software de alta calidad y mejorar constantemente a través de proyectos reales y aprendizaje continuo.</p>
+<h2>Experiencia</h2>
+<h3><span>Ingeniero de QA, Multicommerce</span> <span>Abr 2024 &ndash; Presente</span></h3>
+<p>Mar del Plata, Argentina</p>
+<ul>
+<li>Ejecuté planes y casos de prueba manuales en una plataforma de gestión de casinos, incluyendo juegos, sistemas de servidor y componentes de hardware.</li>
+<li>Realicé pruebas funcionales e integrales en periféricos como impresoras de tickets, dispensadores de billetes y terminales táctiles.</li>
+<li>Identifiqué, documenté y realicé el seguimiento de problemas de software y hardware utilizando Trac, colaborando con desarrolladores y equipos técnicos para asegurar su resolución.</li>
+<li>Participé en iteraciones ágiles, pruebas de regresión y validación de funcionalidades para aplicaciones web y sistemas locales.</li>
+</ul>
+<h3><span>Docente Adscripto de Bases de Datos, Universidad Nacional de Mar del Plata</span> <span>Ago 2025 &ndash; Dic 2025</span></h3>
+<p>Mar del Plata, Argentina</p>
+<ul>
+<li>Brindé apoyo académico y tutorías a estudiantes sobre conceptos fundamentales de bases de datos, incluyendo modelado ER, álgebra relacional y SQL.</li>
+<li>Colaboré en la explicación de temas complejos, como normalización, transacciones ACID y optimización de consultas, mediante ejemplos prácticos y resolución de dudas en clase.</li>
+</ul>
+<h3><span>Pasante, BSV Association</span> <span>Oct 2025 &ndash; Dic 2025</span></h3>
+<p>Mar del Plata, Argentina</p>
+<ul>
+<li>Desarrollé aplicaciones de prueba de concepto que demostraron integraciones reales de SDK de cadena de bloques para micropagos de contenido, NFT y almacenamiento en cadena.</li>
+<li>Identifiqué y documenté brechas e inconsistencias en el SDK para mejorar la usabilidad para desarrolladores y optimizar flujos de integración.</li>
+<li>Colaboré con el equipo técnico para proponer mejoras y contribuir a la documentación para desarrolladores.</li>
+</ul>
+<h3><span>Operador de Fotocabina (Autónomo)</span> <span>Abr 2022 &ndash; Presente</span></h3>
+<p>Mar del Plata, Argentina</p>
+<ul>
+<li>Gestioné un negocio independiente de cabinas fotográficas, encargándome de la logística, la comunicación con clientes y la operación en eventos.</li>
+</ul>
+<h3><span>Desarrollador Full-Stack, Apeiron</span> <span>Abr 2021 &ndash; Jul 2021</span></h3>
+<p>Mar del Plata, Argentina</p>
+<ul>
+<li>Desarrollé un complemento de venta cruzada y venta adicional para TiendaNube utilizando Node.js, HTML, CSS y JavaScript.</li>
+<li>El proyecto incrementó los ingresos de los clientes al mejorar recomendaciones de productos y optimizar la experiencia de compra.</li>
+</ul>
+<h2>Proyectos</h2>
+<h3><span>IlliApp</span> <span>Ene 2025 &ndash; Presente</span></h3>
+<p>El proyecto, que funciona como tesis final de Ingeniería en Informática, consiste en el desarrollo de un sistema web de gestión académica para una escuela secundaria, orientado a modernizar y optimizar procesos administrativos y académicos. Este proyecto representa el último paso para obtener el título.</p>
+<ul>
+<li>Lideré el proceso de relevamiento de requerimientos con las partes interesadas, traduciendo sus necesidades en especificaciones del sistema.</li>
+<li>Diseñé la arquitectura del sistema y los modelos de datos, asegurando mantenibilidad y escalabilidad.</li>
+<li>Coordiné al equipo de desarrollo mediante asignación de tareas, seguimiento de avances y revisión de cambios de código antes del despliegue.</li>
+</ul>
+<h2>Educación</h2>
+<h3><span>Universidad Nacional de Mar del Plata, Ingeniería en Informática</span> <span>2021 &ndash; 2026</span></h3>
+<p>Mar del Plata, Argentina</p>
+<ul>
+<li>Graduación estimada: abril de 2026</li>
+</ul>
+<h3><span>Secundario Herman Ottó Gimnázium</span> <span>2019 &ndash; 2020</span></h3>
+<p>Miskolc, Hungría</p>
+<h3><span>Colegio Nacional Dr. Arturo U. Illia</span> <span>2014 &ndash; 2019</span></h3>
+<p>Mar del Plata, Argentina</p>
+<h2>Habilidades</h2>
+<ul>
+<li>Programación: JavaScript, TypeScript, Node.js, React, Express, SQL, Python</li>
+<li>Herramientas: Git, Docker, Postman, Trac, VS Code</li>
+<li>Bases de datos: PostgreSQL, MongoDB</li>
+</ul>
+<h2>Cursos y Certificados</h2>
+<h3><span>Deep Dive into Blockchain, Universidad de Zúrich (Escuela de Verano)</span> <span>Jul 2025</span></h3>
+<ul>
+<li>Curso académico intensivo de 3 semanas sobre tecnología blockchain desde perspectivas técnicas, económicas y legales.</li>
+<li>Incluyó conferencias de expertos, colaboración con socios de la industria, estudios de caso y talleres prácticos con participantes internacionales.</li>
+</ul>
+<h3><span>MardelBlockchain (1ra, 2da, 3ra y 4ta edición), Facultad de Ciencias Económicas UNMDP</span> <span>2022 &ndash; 2025</span></h3>
+<ul>
+<li>Participé en múltiples jornadas académicas completas sobre fundamentos de blockchain, criptoactivos y el ecosistema de Bitcoin.</li>
+</ul>
+<h3><span>ICP Summer Camp, Programa Intensivo en Web3 e Internet Computer Protocol</span> <span>Feb 2025</span></h3>
+<ul>
+<li>Completé un programa intensivo de 4 días enfocado en tecnologías descentralizadas y conceptos de Web3, con actividades prácticas y talleres grupales.</li>
+</ul>
+<h2>Idiomas</h2>
+<ul>
+<li>Español: Nativo</li>
+<li>Inglés: Avanzado</li>
+<li>Alemán: Intermedio</li>
+<li>Portugués: Básico</li>
+<li>Francés: Básico</li>
+<li>Húngaro: Básico</li>
+</ul></div>
+</body>
+</html>
