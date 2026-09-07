@@ -10,12 +10,16 @@ Computer Engineer with experience in backend development, QA, and blockchain —
 
 ## Experience
 
-### <span>Backend Engineer, Multicommerce</span> <span>Jan 2026 -- Present</span>
+### <span>Backend Engineer, Nexus</span> <span>Sep 2026 -- Present</span>
+
+- Backend Engineer, ramping up on the team's systems and codebase.
+
+### <span>Backend Engineer, Multicommerce</span> <span>Jan 2026 -- Aug 2026</span>
 
 - Designed and built backend services for a casino management platform using Node.js and PostgreSQL.
 - Refactored the server architecture to improve maintainability, decoupling tightly coupled components.
 - Optimized the database connection pool, reducing PostgreSQL load from ~100% to 60% under stress and cutting latency by ~500ms.
-- Previously served as QA Engineer (Apr 2024 – Dec 2025), executing manual and functional tests, tracking issues with Trac, and collaborating on resolution.
+- Previously served as QA Engineer (Apr 2024 – Dec 2025), executing manual and functional tests, tracking issues and collaborating on resolution.
 
 ### <span>Intern, BSV Association</span> <span>Oct 2025 -- Dec 2025</span>
 
@@ -53,7 +57,7 @@ Computer Engineer with experience in backend development, QA, and blockchain —
 ## Skills
 
 - **Languages & Runtimes:** Node.js, Python, Java, JavaScript, TypeScript, SQL
-- **Frameworks & Tools:** Spring, React, Git, Docker, Postman, Trac
+- **Frameworks & Tools:** Spring, React, Git, Docker, Postman
 - **Databases:** PostgreSQL, MongoDB
 - **Other:** API Design, RESTful APIs
 
