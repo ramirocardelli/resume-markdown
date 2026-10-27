@@ -14,7 +14,7 @@ from importlib.resources import files
 import markdown
 
 preamble = """\
-<html lang="en">
+<html lang="{lang}">
 <head>
 <meta charset="UTF-8">
 <title>{title}</title>
@@ -98,21 +98,25 @@ def title(md: str) -> str:
     )
 
 
-def make_html(md: str, prefix: str = "resume") -> str:
+def make_html(
+    md: str, prefix: str = "resume", css_path: str = "", lang: str = "en"
+) -> str:
     """
     Compile md to HTML and prepend/append preamble/postamble.
 
-    Insert <prefix>.css if it exists.
+    Use css_path to style the output. If it is empty, use <prefix>.css if it
+    exists; otherwise the output is unstyled.
     """
+    css_file = css_path or prefix + ".css"
     try:
-        with open(prefix + ".css") as cssfp:
+        with open(css_file) as cssfp:
             css = cssfp.read()
     except FileNotFoundError:
-        print(prefix + ".css not found. Output will by unstyled.")
+        print(css_file + " not found. Output will by unstyled.")
         css = ""
     return "".join(
         (
-            preamble.format(title=title(md), css=css),
+            preamble.format(title=title(md), css=css, lang=lang),
             markdown.markdown(md, extensions=["smarty", "abbr"]),
             postamble,
         )
@@ -233,6 +237,15 @@ def main():
         "--chrome-path",
         help="Path to Chrome or Chromium executable",
     )
+    build_parser.add_argument(
+        "--css",
+        help="Path to CSS file used to style the output [<input>.css]",
+    )
+    build_parser.add_argument(
+        "--lang",
+        default="en",
+        help="Value of the HTML lang attribute [en]",
+    )
 
     args = parser.parse_args()
 
@@ -250,7 +263,7 @@ def main():
 
         with open(args.file, encoding="utf-8") as mdfp:
             md = mdfp.read()
-        html = make_html(md, prefix=prefix)
+        html = make_html(md, prefix=prefix, css_path=args.css or "", lang=args.lang)
 
         if not args.no_html:
             with open(prefix + ".html", "w", encoding="utf-8") as htmlfp:

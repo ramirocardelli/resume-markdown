@@ -75,6 +75,19 @@ pip install resume-markdown
    resume-markdown build myresume.md
    ```
 
+ - Use `--css` to style the output with a stylesheet other than the one named
+   after the input file (useful to share a single stylesheet between several
+   versions of the same resume):
+    ```bash
+    resume-markdown build myresume.md --css resume.css
+    ```
+
+ - Use `--lang` to set the language of the generated HTML (and therefore of
+   the PDF), for example when building a translated copy of a resume:
+    ```bash
+    resume-markdown build resume-es.md --css resume.css --lang es
+    ```
+
 ## Customization
 
 Edit [`resume.css`](src/resume_markdown/resume.css) to change the appearance of your resume. The

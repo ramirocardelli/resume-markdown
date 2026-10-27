@@ -12,7 +12,8 @@ Informatics Engineer with experience in backend development, QA, and blockchain 
 
 ### <span>Backend Engineer, Nexus</span> <span>Sep 2026 -- Present</span>
 
-- Ramping up on the team's backend systems.
+- Own the **bridge-robustness** effort: planning and authoring test cases to verify the bridge works end-to-end.
+- Validate the bridge across environments: local (fakes/stubs and real components), testnet, and eventually mainnet.
 
 ### <span>Teaching Assistant of Databases, Universidad Nacional de Mar del Plata</span> <span>Aug 2025 -- Present</span>
 
@@ -27,7 +28,10 @@ Informatics Engineer with experience in backend development, QA, and blockchain 
 - Designed and built backend services for a casino management platform using Java and MySQL.
 - Refactored the server architecture to improve maintainability, decoupling tightly coupled components.
 - Optimized the database connection pool, reducing MySQL load from ~100% to 60% under stress and cutting latency by ~500ms.
-- Previously served as QA Engineer (Apr 2024 – Dec 2025), executing manual and functional tests, tracking issues and collaborating on resolution.
+
+### <span>QA Engineer, Multicommerce</span> <span>Apr 2024 -- Dec 2025</span>
+
+- Executed manual and functional tests, tracked issues, and collaborated on their resolution.
 
 ### <span>Intern, BSV Association</span> <span>Oct 2025 -- Dec 2025</span>
 
@@ -49,14 +53,12 @@ Informatics Engineer with experience in backend development, QA, and blockchain 
 
 ### <span>Universidad Nacional de Mar del Plata, Informatics Engineering</span> <span>2021 -- May 2026</span>
 
-- Graduated May 22, 2026
+- Graduation: May 22, 2026
 - **Final project — IlliApp:** Academic management web system for a secondary school. Led requirements gathering, designed system architecture, and coordinated the development team.
-
-### <span>Secondary School — Hungary (2019–2020) & Argentina (2014–2019)</span>
 
 ## Skills
 
-- **Languages & Runtimes:** Node.js, Python, Java, JavaScript, TypeScript, SQL
+- **Languages & Runtimes:** Java, Python, JavaScript, TypeScript, Node.js, SQL
 - **Frameworks & Tools:** Spring, React, Next.js, Git, Docker, Postman
 - **Databases:** PostgreSQL, MongoDB, MySQL
 
