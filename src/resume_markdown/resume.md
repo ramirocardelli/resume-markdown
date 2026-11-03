@@ -10,35 +10,35 @@ Informatics Engineer with experience in backend development, QA, and blockchain 
 
 ## Experience
 
-### <span>Backend Engineer, Nexus</span> <span>Sep 2026 -- Present</span>
+### <span>Backend Engineer, Nexus</span> <span>Sep 2026 - Oct 2026</span>
 
 - Own the **bridge-robustness** effort: planning and authoring test cases to verify the bridge works end-to-end.
 - Validate the bridge across environments: local (fakes/stubs and real components), testnet, and eventually mainnet.
 
-### <span>Teaching Assistant of Databases, Universidad Nacional de Mar del Plata</span> <span>Aug 2025 -- Present</span>
+### <span>Teaching Assistant of Databases, Universidad Nacional de Mar del Plata</span> <span>Aug 2025 - Present</span>
 
 - Provided academic support and tutoring on database fundamentals (ER modeling, relational algebra, SQL, normalization, ACID transactions, query optimization).
 
-### <span>Teaching Assistant, Deep Dive into Blockchain 2026 (7th Ed.), University of Zurich</span> <span>Jul 6 -- Jul 24, 2026</span>
+### <span>Teaching Assistant, Deep Dive into Blockchain 2026 (7th Ed.), University of Zurich</span> <span>Jul 6 - Jul 24, 2026</span>
 
 - Supported an intensive 3-week course on blockchain covering technical, economic, and legal perspectives, alongside professors and industry experts.
 
-### <span>Backend Engineer, Multicommerce</span> <span>Jan 2026 -- Aug 2026</span>
+### <span>Backend Engineer, Multicommerce</span> <span>Jan 2026 - Aug 2026</span>
 
 - Designed and built backend services for a casino management platform using Java and MySQL.
 - Refactored the server architecture to improve maintainability, decoupling tightly coupled components.
 - Optimized the database connection pool, reducing MySQL load from ~100% to 60% under stress and cutting latency by ~500ms.
 
-### <span>QA Engineer, Multicommerce</span> <span>Apr 2024 -- Dec 2025</span>
+### <span>QA Engineer, Multicommerce</span> <span>Apr 2024 - Dec 2025</span>
 
 - Executed manual and functional tests, tracked issues, and collaborated on their resolution.
 
-### <span>Intern, BSV Association</span> <span>Oct 2025 -- Dec 2025</span>
+### <span>Intern, BSV Association</span> <span>Oct 2025 - Dec 2025</span>
 
 - Built proof-of-concept blockchain SDK integrations for micropayments, NFTs, and on-chain storage.
 - Developed developer tools and SDK documentation to improve usability and streamline integration flows.
 
-### <span>Full-Stack Developer, Apeiron</span> <span>Apr 2021 -- Jul 2021</span>
+### <span>Full-Stack Developer, Apeiron</span> <span>Apr 2021 - Jul 2021</span>
 
 - Developed a cross-selling and upselling plugin for Tiendanube using Node.js, including REST API development.
 - The project increased client revenue by improving product recommendations and optimizing the shopping experience.
@@ -51,7 +51,7 @@ Informatics Engineer with experience in backend development, QA, and blockchain 
 
 ## Education
 
-### <span>Universidad Nacional de Mar del Plata, Informatics Engineering</span> <span>2021 -- May 2026</span>
+### <span>Universidad Nacional de Mar del Plata, Informatics Engineering</span> <span>2021 - May 2026</span>
 
 - Graduation: May 22, 2026
 - **Final project — IlliApp:** Academic management web system for a secondary school. Led requirements gathering, designed system architecture, and coordinated the development team.
