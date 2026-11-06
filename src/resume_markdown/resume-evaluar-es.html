@@ -1,0 +1,214 @@
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ramiro Cardelli</title>
+<style>
+body {
+    color: #000000;
+    background: #EEEEEE;
+    font: 1.1em "Times New Roman";
+    line-height: 1.2;
+    margin: 40px 0;
+}
+#resume {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 40px 60px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 2px 2px 4px #AAAAAA;
+    -webkit-box-shadow: 2px 2px 4px #AAAAAA;
+}
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 200%;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    border-bottom: 1px solid #000000;
+    text-transform: uppercase;
+    font-size: 130%;
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+h3 {
+    font-size: 100%;
+    margin: 0.8em 0 0.3em 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+/* role subheadings within the same company */
+h3 + h4 {
+    margin-top: 0.4em;
+}
+h4 {
+    font-size: 100%;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0.6em 0 0.2em 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+p {
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    }
+ul {
+    padding: 0;
+    margin: 0 1.5em;
+    }
+/* ul immediately after h1 = contact list */
+h1 + ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    }
+h1 + ul > li {
+    display: inline;
+    white-space: pre;
+    list-style-type: none;
+}
+h1 + ul > li:after {
+    content: "  \2022  ";
+}
+h1 + ul > li:last-child:after {
+    content: "";
+}
+/* p immediately after contact list = summary */
+h1 + ul + p {
+    margin: 1em 0;
+}
+@media print {
+    body {
+        font-size: 10pt;
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+    #resume {
+        margin: 0;
+        padding: 0;
+        border: 0px;
+        background: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    /* Do not underline abbr tags in PDF */
+    abbr {
+        text-decoration: none;
+        font-variant: none;
+    }
+    /* Make links black in PDF */
+    /* Move this outside the print block to apply this in HTML too */
+    a, a:link, a:visited, a:hover {
+        color: #000000;
+        text-decoration: underline;
+    }
+}
+@page {
+    /* Change margins and paper size of PDF */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/@page */
+    size: letter;
+    margin: 0.5in 0.8in;
+}
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 16pt;
+        margin: 0;
+        padding: 0;
+        background: #FFFFFF !important;
+    }
+    #resume {
+        margin: 0;
+        padding: 1em;
+        border: 0px;
+        background: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+}
+
+</style>
+</head>
+<body>
+<div id="resume">
+<h1>Ramiro Cardelli</h1>
+<ul>
+<li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#97;&#109;&#105;&#114;&#111;&#99;&#97;&#114;&#100;&#101;&#108;&#108;&#105;&#56;&#57;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#114;&#97;&#109;&#105;&#114;&#111;&#99;&#97;&#114;&#100;&#101;&#108;&#108;&#105;&#56;&#57;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>+54 9 223 663-2207</li>
+<li>Mar del Plata, Argentina</li>
+<li><a href="https://www.linkedin.com/in/ramirocardelli/">LinkedIn</a></li>
+<li><a href="https://github.com/ramirocardelli/">GitHub</a></li>
+</ul>
+<p><strong>Desarrollador Backend Java</strong> con más de 2,5 años de experiencia en sistemas productivos (Java 8, 17 y 21, Spring, Hibernate). Optimicé el rendimiento de una plataforma multitenant (latencia de las consultas de ~900 ms a ~400 ms y carga de MySQL de ~100% a ~60%), desacoplé su arquitectura y automaticé los releases con Jenkins. Trabajé en una arquitectura de microservicios con code reviews en GitHub, y hoy co-desarrollo una plataforma de microservicios con Spring Boot, Spring Cloud, PostgreSQL y Redis. Experiencia en APIs REST, bases de datos SQL y NoSQL, QA y docencia universitaria en bases de datos.</p>
+<h2>Experiencia</h2>
+<h3><span>Ingeniero Backend, Nexus</span> <span>sep 2026 - oct 2026</span></h3>
+<p><em>Arquitectura de microservicios — GitHub, Linear, Slack, Google Workspace, Claude</em></p>
+<ul>
+<li>Estuve a cargo de la robustez del <strong>bridge</strong>, uno de los microservicios de la plataforma: planifiqué y escribí casos de prueba para verificar que funcione de extremo a extremo.</li>
+<li>Validé el servicio en distintos entornos: local (con fakes/stubs y componentes reales), testnet y, como etapa final, mainnet.</li>
+<li>Participé en code reviews en GitHub, en un equipo que trabajaba con Linear, Slack y desarrollo asistido por IA con Claude.</li>
+</ul>
+<h3><span>Multicommerce</span> <span>abr 2024 - ago 2026</span></h3>
+<h4><span>Ingeniero Backend</span> <span>mar 2025 - ago 2026</span></h4>
+<p><em>Plataforma multitenant de gestión de casinos — Java 8 / 17, Spring, Hibernate, MySQL, Jersey, Jenkins</em></p>
+<ul>
+<li><strong>Optimicé el rendimiento de la base de datos:</strong> detecté que el servidor abría y cerraba una conexión a MySQL por cada consulta; lo reemplacé por un pool reutilizable de HikariCP (30–50 conexiones) con cambio de esquema por tenant y limpieza de conexiones para mantener el aislamiento entre clientes. Bajé la latencia de las consultas de ~900 ms a ~400 ms y la carga de MySQL de ~100% a ~60% bajo estrés, sin sumar instancias de base de datos.</li>
+<li><strong>Desacoplé la arquitectura del servidor:</strong> extraje el Redemption Kiosk a una biblioteca independiente y opcional, moví la lógica de negocio de los endpoints REST a servicios de Spring y reorganicé responsabilidades entre los módulos común y núcleo.</li>
+<li><strong>Integré el backend con el frontend:</strong> adapté APIs REST a lo que necesitaba el frontend e integré los servicios REST de Jersey con la inyección de dependencias de Spring.</li>
+<li><strong>Modernicé el stack:</strong> migré la caché de Ehcache 2 a Ehcache 3 sobre la API JCache y agregué deduplicación y throttling al servicio de envío de emails (SMTP).</li>
+<li><strong>Automaticé los releases:</strong> armé pipelines en Jenkins que despliegan versiones en las máquinas virtuales de test y producción, y desarrollé una herramienta interna de gestión de releases (Spring Boot 3, SVN) con el flujo Draft → Testing → Ready → Released entre DEV, QA y PROD.</li>
+</ul>
+<h4><span>Ingeniero de QA</span> <span>abr 2024 - feb 2025</span></h4>
+<ul>
+<li>Ejecuté pruebas manuales y funcionales, registré incidencias y colaboré con el equipo de desarrollo en su resolución.</li>
+</ul>
+<h3><span>Practicante, BSV Association</span> <span>oct 2025 - dic 2025</span></h3>
+<ul>
+<li>Desarrollé tres pruebas de concepto full-stack sobre blockchain (TypeScript, Node.js / Express, MongoDB, React): APIs REST con persistencia en MongoDB, autenticación por firma de wallet y registros verificables on-chain. También desarrollé herramientas y documentación de SDKs.</li>
+</ul>
+<h3><span>Desarrollador Freelance — Editor de Boletines</span> <span>sep 2025 - abr 2026</span></h3>
+<ul>
+<li>Desarrollé una aplicación de escritorio (Electron, GrapesJS) para que una clienta mayor y sin conocimientos técnicos arme sola el boletín por email de una organización. Diseñé la experiencia de uso a partir de sus necesidades: interfaz simple en español, plantillas listas y un ejecutable portable sin instalación.</li>
+</ul>
+<h3><span>Desarrollador Full-Stack, Apeiron</span> <span>abr 2021 - jul 2021</span></h3>
+<ul>
+<li>Desarrollé un plugin de venta cruzada y upselling para Tiendanube con Node.js, incluyendo su API REST.</li>
+</ul>
+<h2>Proyectos</h2>
+<h3><span>KleinKauf — Plataforma de gestión para pequeños comercios (con un compañero)</span> <span>nov 2026 - actualidad</span></h3>
+<p><em>Microservicios — Java 21, Spring Boot 3, Spring Cloud Gateway, Eureka, PostgreSQL, Redis, Resilience4j, Docker</em></p>
+<ul>
+<li>Co-desarrollo un SaaS multitenant (catálogo, stock, combos, ventas online y en el local): microservicios en Spring Boot detrás de un API gateway, con un schema de PostgreSQL por tenant, caché en dos niveles (Caffeine + Redis) y llamadas entre servicios protegidas con Resilience4j.</li>
+<li>Desarrollé los paneles de administración: ventas del local, seguimiento de pedidos y reportes; combos con descuento porcentual o fijo; matriz de permisos por rol; panel de superadmin para gestionar las tiendas; y emails transaccionales por tienda con Resend.</li>
+<li>Hice que el gateway devuelva errores 4xx correctos con cabeceras CORS, reescribí el frontend en React con TanStack Query y levanté todo el backend con un solo docker compose y un seed de datos de prueba.</li>
+</ul>
+<h3><span>1.er lugar — Ethereum Argentina Hackathon: FundMe!</span> <span>2026</span></h3>
+<ul>
+<li>En un equipo de tres, construí una MiniApp de crowdfunding para Lemon con Next.js, una API REST en capas (dominio, repositorios) y PostgreSQL con Sequelize.</li>
+</ul>
+<h2>Docencia</h2>
+<ul>
+<li><strong>Ayudante de Cátedra de Bases de Datos</strong>, Universidad Nacional de Mar del Plata (ago 2025 - actualidad): modelado ER, SQL, normalización, transacciones ACID y optimización de consultas.</li>
+<li><strong>Ayudante de Cátedra, Deep Dive into Blockchain</strong>, Universidad de Zúrich (jul 2026): curso intensivo de 3 semanas junto a profesores y expertos de la industria.</li>
+</ul>
+<h2>Educación</h2>
+<h3><span>Universidad Nacional de Mar del Plata, Ingeniería en Informática</span> <span>2021 - may 2026</span></h3>
+<ul>
+<li><strong>Trabajo final — IlliApp:</strong> sistema web de gestión académica para una escuela secundaria. Lideré el relevamiento de requisitos, diseñé la arquitectura del sistema y coordiné al equipo de desarrollo.</li>
+</ul>
+<h2>Habilidades</h2>
+<ul>
+<li><strong>Java y backend:</strong> Java (8, 17, 21), Spring Boot, Spring MVC, Spring Cloud (Gateway, Eureka), Hibernate / JPA, Resilience4j, Jersey, APIs REST, microservicios, multitenancy</li>
+<li><strong>Bases de datos y caché:</strong> SQL (MySQL, PostgreSQL), NoSQL (MongoDB, Redis), HikariCP, Ehcache / JCache, Caffeine</li>
+<li><strong>Testing y DevOps:</strong> JUnit, Postman, Jenkins (CI/CD), Docker, Git, SVN</li>
+<li><strong>Otros lenguajes y frontend:</strong> Python, TypeScript, JavaScript, Node.js / Express, React, Next.js</li>
+<li><strong>Colaboración:</strong> GitHub (code reviews), Linear, Slack, Google Workspace, Claude (desarrollo asistido por IA)</li>
+<li><strong>Idiomas:</strong> español (nativo), inglés (C2), alemán (B2)</li>
+</ul></div>
+</body>
+</html>

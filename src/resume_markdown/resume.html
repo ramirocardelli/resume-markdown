@@ -40,6 +40,19 @@ h3 {
     display: flex;
     justify-content: space-between;
 }
+/* role subheadings within the same company */
+h3 + h4 {
+    margin-top: 0.4em;
+}
+h4 {
+    font-size: 100%;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0.6em 0 0.2em 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
 p {
     margin: 0 0 0.5em 0;
     padding: 0;
@@ -131,12 +144,14 @@ h1 + ul + p {
 <li><a href="https://www.linkedin.com/in/ramirocardelli/">LinkedIn</a></li>
 <li><a href="https://github.com/ramirocardelli/">GitHub</a></li>
 </ul>
-<p>Informatics Engineer with experience in backend development, QA, and blockchain — passionate about building reliable software and decentralized infrastructure.</p>
+<p>Informatics Engineer and backend developer with 2.5+ years of experience in production systems. Built Java and Spring services for a multitenant casino platform, where I optimized MySQL access (query latency from ~900 ms to ~400 ms), decoupled the server architecture and automated releases with Jenkins. At Nexus I tested the bridge service of a microservices platform. Also experienced in blockchain (BSV proofs of concept, 1st place at the Ethereum Argentina Hackathon), QA, and university teaching in databases.</p>
 <h2>Experience</h2>
 <h3><span>Backend Engineer, Nexus</span> <span>Sep 2026 - Oct 2026</span></h3>
+<p><em>Microservices architecture — GitHub, Linear, Slack, Google Workspace, Claude</em></p>
 <ul>
-<li>Own the <strong>bridge-robustness</strong> effort: planning and authoring test cases to verify the bridge works end-to-end.</li>
-<li>Validate the bridge across environments: local (fakes/stubs and real components), testnet, and eventually mainnet.</li>
+<li>Owned the <strong>bridge-robustness</strong> effort for the bridge, one of the platform&rsquo;s microservices: planned and wrote test cases to verify it works end to end.</li>
+<li>Validated the bridge across environments: local (fakes/stubs and real components), testnet and, as the final stage, mainnet.</li>
+<li>Took part in code reviews on GitHub, in a team that worked with Linear, Slack and AI-assisted development with Claude.</li>
 </ul>
 <h3><span>Teaching Assistant of Databases, Universidad Nacional de Mar del Plata</span> <span>Aug 2025 - Present</span></h3>
 <ul>
@@ -146,25 +161,46 @@ h1 + ul + p {
 <ul>
 <li>Supported an intensive 3-week course on blockchain covering technical, economic, and legal perspectives, alongside professors and industry experts.</li>
 </ul>
-<h3><span>Backend Engineer, Multicommerce</span> <span>Jan 2026 - Aug 2026</span></h3>
+<h3><span>Multicommerce</span> <span>Apr 2024 - Aug 2026</span></h3>
+<h4><span>Backend Engineer</span> <span>Mar 2025 - Aug 2026</span></h4>
+<p><em>Multitenant casino management platform — Java 8 / 17, Spring, Hibernate, MySQL, Jersey, Jenkins</em></p>
 <ul>
-<li>Designed and built backend services for a casino management platform using Java and MySQL.</li>
-<li>Refactored the server architecture to improve maintainability, decoupling tightly coupled components.</li>
-<li>Optimized the database connection pool, reducing MySQL load from ~100% to 60% under stress and cutting latency by ~500ms.</li>
+<li><strong>Removed a database bottleneck:</strong> found the server opened and closed a MySQL connection per query; replaced it with a reusable HikariCP pool (30–50 connections) with per-tenant schema switching and connection cleanup to keep tenants isolated. Cut query latency from ~900 ms to ~400 ms and MySQL load from ~100% to ~60% under stress, avoiding extra database instances.</li>
+<li><strong>Decoupled the server architecture:</strong> extracted the Redemption Kiosk into an optional standalone library, moved business logic out of REST endpoints into Spring services, and reorganized responsibilities between the shared and core server modules. Adapted REST APIs to integrate with the frontend.</li>
+<li><strong>Modernized the stack:</strong> migrated caching from Ehcache 2 to Ehcache 3 behind the JCache API, and integrated Jersey REST services with Spring dependency injection.</li>
+<li><strong>Hardened email delivery:</strong> added deduplication and throttling to the SMTP service to prevent duplicate sends and control sending rate.</li>
+<li><strong>Automated releases:</strong> built Jenkins pipelines that deploy versions directly to the test and production VMs, and developed an internal release-management tool (Spring Boot 3, SVN) that models the release flow (Draft → Testing → Ready → Released) across DEV, QA and PROD.</li>
 </ul>
-<h3><span>QA Engineer, Multicommerce</span> <span>Apr 2024 - Dec 2025</span></h3>
+<h4><span>QA Engineer</span> <span>Apr 2024 - Feb 2025</span></h4>
 <ul>
 <li>Executed manual and functional tests, tracked issues, and collaborated on their resolution.</li>
 </ul>
 <h3><span>Intern, BSV Association</span> <span>Oct 2025 - Dec 2025</span></h3>
+<p><em>Proof-of-concept dApps on the BSV blockchain — TypeScript, React, Node.js / Express, MongoDB, @bsv/sdk</em></p>
 <ul>
-<li>Built proof-of-concept blockchain SDK integrations for micropayments, NFTs, and on-chain storage.</li>
+<li><strong>Vehicle History:</strong> vehicle and maintenance records stored on-chain as PushDrop tokens, with VIN search and PDF reports that link each record to its transaction for public verification.</li>
+<li><strong>Micropayment Content Access:</strong> pay-per-article content with satoshi payments sent directly to each author through BRC-29 derived keys, and a content endpoint protected by BRC-104 wallet authentication.</li>
+<li><strong>Medical Data Sharing:</strong> prototype for patient-controlled sharing of medical images with doctors, encrypted in the browser and tied to wallet-based identities and roles.</li>
 <li>Developed developer tools and SDK documentation to improve usability and streamline integration flows.</li>
+</ul>
+<h3><span>Freelance Developer — Newsletter Editor</span> <span>Sep 2025 - Apr 2026</span></h3>
+<ul>
+<li>Built a desktop app (Electron, GrapesJS) that lets a non-technical, older client produce an organization&rsquo;s email newsletter on her own, without outside help: pick a template, edit text and banners visually, and copy email-ready HTML.</li>
+<li>Designed every flow around her: Spanish-only interface, minimal controls, saved projects and filterable templates, a guard against closing with unsaved changes, and a portable Windows executable with no installation.</li>
+<li>Built table-based HTML templates that render consistently across email clients, plus a build script that embeds banner images as Base64.</li>
 </ul>
 <h3><span>Full-Stack Developer, Apeiron</span> <span>Apr 2021 - Jul 2021</span></h3>
 <ul>
 <li>Developed a cross-selling and upselling plugin for Tiendanube using Node.js, including REST API development.</li>
 <li>The project increased client revenue by improving product recommendations and optimizing the shopping experience.</li>
+</ul>
+<h2>Projects</h2>
+<h3><span>KleinKauf — Management Platform for Small Shops (with a teammate)</span> <span>Nov 2026 - Present</span></h3>
+<p><em>Microservices — Java 21, Spring Boot 3, Spring Cloud Gateway, Eureka, PostgreSQL, Redis, Resilience4j, React, Docker</em></p>
+<ul>
+<li>Co-developing a multitenant SaaS for small shops (catalog, stock, combos, online and in-store sales): Spring Boot microservices behind an API gateway, with schema-per-tenant PostgreSQL, two-level caching (Caffeine + Redis) and service-to-service calls protected by Resilience4j.</li>
+<li>Built the store and platform admin panels: sales with in-store orders, order tracking and reports; product combos with percentage or fixed discounts; a per-role permission matrix; and a superadmin panel to manage stores. Added per-store transactional email with Resend.</li>
+<li>Rewrote the frontend in Vite + React Router with TanStack Query and centralized session handling, made the gateway return proper 4xx errors with CORS headers, and set up the whole backend to run with one Docker Compose file plus a seed that loads a demo store through the API.</li>
 </ul>
 <h2>Hackathons</h2>
 <h3><span>1st Place — Ethereum Argentina Hackathon (Adoption, Impact &amp; DAOs)</span> <span>2026</span></h3>
@@ -179,9 +215,13 @@ h1 + ul + p {
 </ul>
 <h2>Skills</h2>
 <ul>
-<li><strong>Languages &amp; Runtimes:</strong> Java, Python, JavaScript, TypeScript, Node.js, SQL</li>
-<li><strong>Frameworks &amp; Tools:</strong> Spring, React, Next.js, Git, Docker, Postman</li>
-<li><strong>Databases:</strong> PostgreSQL, MongoDB, MySQL</li>
+<li><strong>Programming:</strong> Java (8, 17, 21), Python, JavaScript, TypeScript, SQL</li>
+<li><strong>Backend:</strong> Spring Boot, Spring MVC, Spring Cloud (Gateway, Eureka), Hibernate / JPA, Resilience4j, Jersey, Node.js / Express, REST APIs, microservices, multitenancy</li>
+<li><strong>Databases &amp; Caching:</strong> SQL (MySQL, PostgreSQL), NoSQL (MongoDB, Redis), HikariCP, Ehcache / JCache, Caffeine</li>
+<li><strong>Frontend:</strong> React, Next.js</li>
+<li><strong>Testing &amp; DevOps:</strong> JUnit, Postman, Jenkins (CI/CD), Docker, Git, SVN</li>
+<li><strong>Collaboration:</strong> GitHub (code reviews), Linear, Slack, Google Workspace, Claude (AI-assisted development)</li>
+<li><strong>Languages:</strong> Spanish (native), English (C2), German (B2)</li>
 </ul></div>
 </body>
 </html>

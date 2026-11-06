@@ -40,6 +40,19 @@ h3 {
     display: flex;
     justify-content: space-between;
 }
+/* role subheadings within the same company */
+h3 + h4 {
+    margin-top: 0.4em;
+}
+h4 {
+    font-size: 100%;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0.6em 0 0.2em 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
 p {
     margin: 0 0 0.5em 0;
     padding: 0;
@@ -131,11 +144,14 @@ h1 + ul + p {
 <li><a href="https://www.linkedin.com/in/ramirocardelli/">LinkedIn</a></li>
 <li><a href="https://github.com/ramirocardelli/">GitHub</a></li>
 </ul>
-<p>Ingeniero Informático con experiencia en desarrollo backend, QA y blockchain — apasionado por construir software confiable e infraestructura descentralizada.</p>
+<p>Ingeniero en Informática y desarrollador backend con más de 2,5 años de experiencia en sistemas productivos. Desarrollé servicios con Java y Spring para una plataforma multitenant de gestión de casinos, donde optimicé el acceso a MySQL (latencia de las consultas de ~900 ms a ~400 ms), desacoplé la arquitectura del servidor y automaticé los releases con Jenkins. En Nexus probé el servicio de bridge de una plataforma de microservicios. También tengo experiencia en blockchain (pruebas de concepto en BSV, 1.er lugar en el Ethereum Argentina Hackathon), QA y docencia universitaria en bases de datos.</p>
 <h2>Experiencia</h2>
 <h3><span>Ingeniero Backend, Nexus</span> <span>sep 2026 - oct 2026</span></h3>
+<p><em>Arquitectura de microservicios — GitHub, Linear, Slack, Google Workspace, Claude</em></p>
 <ul>
-<li>A cargo de la robustez del <strong>bridge</strong>: diseño casos de prueba para verificar que funcione de extremo a extremo.</li>
+<li>Estuve a cargo de la robustez del <strong>bridge</strong>, uno de los microservicios de la plataforma: planifiqué y escribí casos de prueba para verificar que funcione de extremo a extremo.</li>
+<li>Validé el bridge en distintos entornos: local (con fakes/stubs y componentes reales), testnet y, como etapa final, mainnet.</li>
+<li>Participé en code reviews en GitHub, en un equipo que trabajaba con Linear, Slack y desarrollo asistido por IA con Claude.</li>
 </ul>
 <h3><span>Ayudante de Cátedra de Bases de Datos, Universidad Nacional de Mar del Plata</span> <span>ago 2025 - actualidad</span></h3>
 <ul>
@@ -145,25 +161,46 @@ h1 + ul + p {
 <ul>
 <li>Brindé soporte en un curso intensivo de 3 semanas sobre blockchain, desde perspectivas técnicas, económicas y legales, junto a profesores y expertos de la industria.</li>
 </ul>
-<h3><span>Ingeniero Backend, Multicommerce</span> <span>ene 2026 - ago 2026</span></h3>
+<h3><span>Multicommerce</span> <span>abr 2024 - ago 2026</span></h3>
+<h4><span>Ingeniero Backend</span> <span>mar 2025 - ago 2026</span></h4>
+<p><em>Plataforma multitenant de gestión de casinos — Java 8 / 17, Spring, Hibernate, MySQL, Jersey, Jenkins</em></p>
 <ul>
-<li>Diseñé y desarrollé servicios backend para una plataforma de gestión de casinos, utilizando Java y MySQL.</li>
-<li>Refactoricé la arquitectura del servidor para mejorar su mantenibilidad, desacoplando componentes acoplados.</li>
-<li>Optimicé el pool de conexiones de la base de datos: reduje la carga de MySQL de ~100% a 60% bajo estrés y la latencia en ~500 ms.</li>
+<li><strong>Eliminé un cuello de botella en la base de datos:</strong> detecté que el servidor abría y cerraba una conexión a MySQL por cada consulta; lo reemplacé por un pool reutilizable de HikariCP (30–50 conexiones) con cambio de esquema por tenant y limpieza de conexiones para mantener el aislamiento entre clientes. Bajé la latencia de las consultas de ~900 ms a ~400 ms y la carga de MySQL de ~100% a ~60% bajo estrés, evitando sumar instancias de base de datos.</li>
+<li><strong>Desacoplé la arquitectura del servidor:</strong> extraje el Redemption Kiosk a una biblioteca independiente y opcional, moví la lógica de negocio de los endpoints REST a servicios de Spring y reorganicé responsabilidades entre los módulos común y núcleo del servidor. Adapté APIs REST para integrarlas con el frontend.</li>
+<li><strong>Modernicé el stack:</strong> migré la caché de Ehcache 2 a Ehcache 3 sobre la API JCache e integré los servicios REST de Jersey con la inyección de dependencias de Spring.</li>
+<li><strong>Robustecí el envío de emails:</strong> agregué deduplicación y throttling al servicio SMTP para evitar envíos duplicados y controlar la frecuencia de envío.</li>
+<li><strong>Automaticé los releases:</strong> armé pipelines en Jenkins que despliegan versiones directamente en las máquinas virtuales de test y producción, y desarrollé una herramienta interna de gestión de releases (Spring Boot 3, SVN) que modela el flujo (Draft → Testing → Ready → Released) entre DEV, QA y PROD.</li>
 </ul>
-<h3><span>Ingeniero de QA, Multicommerce</span> <span>abr 2024 - dic 2025</span></h3>
+<h4><span>Ingeniero de QA</span> <span>abr 2024 - feb 2025</span></h4>
 <ul>
 <li>Ejecuté pruebas manuales y funcionales, registré incidencias y colaboré en su resolución.</li>
 </ul>
 <h3><span>Practicante, BSV Association</span> <span>oct 2025 - dic 2025</span></h3>
+<p><em>Pruebas de concepto de dApps sobre la blockchain de BSV — TypeScript, React, Node.js / Express, MongoDB, @bsv/sdk</em></p>
 <ul>
-<li>Construí integraciones de prueba de concepto con SDKs de blockchain para micropagos, NFTs y almacenamiento on-chain.</li>
+<li><strong>Vehicle History:</strong> registros de vehículos y mantenimientos guardados on-chain como tokens PushDrop, con búsqueda por VIN y reportes PDF que vinculan cada registro con su transacción para verificarlo públicamente.</li>
+<li><strong>Micropayment Content Access:</strong> contenido pago por artículo, con pagos en satoshis enviados directo a cada autor mediante claves derivadas con BRC-29 y un endpoint de contenido protegido con autenticación de wallet BRC-104.</li>
+<li><strong>Medical Data Sharing:</strong> prototipo para que los pacientes compartan imágenes médicas con sus médicos, cifradas en el navegador y asociadas a identidades y roles basados en la wallet.</li>
 <li>Desarrollé herramientas y documentación de SDKs para mejorar la usabilidad y simplificar los flujos de integración.</li>
+</ul>
+<h3><span>Desarrollador Freelance — Editor de Boletines</span> <span>sep 2025 - abr 2026</span></h3>
+<ul>
+<li>Desarrollé una aplicación de escritorio (Electron, GrapesJS) para que una clienta mayor y sin conocimientos técnicos arme sola, sin ayuda de terceros, el boletín por email de una organización: elige una plantilla, edita textos y banners de forma visual y copia el HTML listo para enviar.</li>
+<li>Diseñé cada flujo pensando en ella: interfaz solo en español, controles mínimos, proyectos guardados y plantillas filtrables, aviso al cerrar con cambios sin guardar y un ejecutable portable para Windows que no requiere instalación.</li>
+<li>Armé plantillas HTML basadas en tablas que se ven igual en los distintos clientes de correo y un script de build que embebe los banners en Base64.</li>
 </ul>
 <h3><span>Desarrollador Full-Stack, Apeiron</span> <span>abr 2021 - jul 2021</span></h3>
 <ul>
 <li>Desarrollé un plugin de venta cruzada y upselling para Tiendanube con Node.js, incluyendo el desarrollo de una API REST.</li>
 <li>El proyecto aumentó los ingresos de los clientes al mejorar las recomendaciones de productos y optimizar la experiencia de compra.</li>
+</ul>
+<h2>Proyectos</h2>
+<h3><span>KleinKauf — Plataforma de gestión para pequeños comercios (con un compañero)</span> <span>nov 2026 - actualidad</span></h3>
+<p><em>Microservicios — Java 21, Spring Boot 3, Spring Cloud Gateway, Eureka, PostgreSQL, Redis, Resilience4j, React, Docker</em></p>
+<ul>
+<li>Co-desarrollo un SaaS multitenant para pequeños comercios (catálogo, stock, combos, ventas online y en el local): microservicios en Spring Boot detrás de un API gateway, con un schema de PostgreSQL por tenant, caché en dos niveles (Caffeine + Redis) y llamadas entre servicios protegidas con Resilience4j.</li>
+<li>Desarrollé los paneles de administración de la tienda y de la plataforma: ventas del local, seguimiento de pedidos y reportes; combos de productos con descuento porcentual o fijo; matriz de permisos por rol; y un panel de superadmin para gestionar las tiendas. Sumé emails transaccionales por tienda con Resend.</li>
+<li>Reescribí el frontend en Vite + React Router con TanStack Query y manejo centralizado de la sesión, hice que el gateway devuelva errores 4xx correctos con cabeceras CORS y levanté todo el backend con un solo docker compose y un seed que carga una tienda demo a través de la API.</li>
 </ul>
 <h2>Hackathons</h2>
 <h3><span>1.er lugar — Ethereum Argentina Hackathon (Adopción, Impacto y DAOs)</span> <span>2026</span></h3>
@@ -178,9 +215,13 @@ h1 + ul + p {
 </ul>
 <h2>Habilidades</h2>
 <ul>
-<li><strong>Lenguajes y entornos de ejecución:</strong> Java, Python, JavaScript, TypeScript, Node.js, SQL</li>
-<li><strong>Frameworks y herramientas:</strong> Spring, React, Next.js, Git, Docker, Postman</li>
-<li><strong>Bases de datos:</strong> PostgreSQL, MongoDB, MySQL</li>
+<li><strong>Programación:</strong> Java (8, 17, 21), Python, JavaScript, TypeScript, SQL</li>
+<li><strong>Backend:</strong> Spring Boot, Spring MVC, Spring Cloud (Gateway, Eureka), Hibernate / JPA, Resilience4j, Jersey, Node.js / Express, APIs REST, microservicios, multitenancy</li>
+<li><strong>Bases de datos y caché:</strong> SQL (MySQL, PostgreSQL), NoSQL (MongoDB, Redis), HikariCP, Ehcache / JCache, Caffeine</li>
+<li><strong>Frontend:</strong> React, Next.js</li>
+<li><strong>Testing y DevOps:</strong> JUnit, Postman, Jenkins (CI/CD), Docker, Git, SVN</li>
+<li><strong>Colaboración:</strong> GitHub (code reviews), Linear, Slack, Google Workspace, Claude (desarrollo asistido por IA)</li>
+<li><strong>Idiomas:</strong> español (nativo), inglés (C2), alemán (B2)</li>
 </ul></div>
 </body>
 </html>
